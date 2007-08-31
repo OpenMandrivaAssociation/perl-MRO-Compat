@@ -1,6 +1,6 @@
 %define module	MRO-Compat
 %define name	perl-%{module}
-%define version 0.03
+%define version 0.04
 %define release %mkrel 1
 
 Name:		%{name}
@@ -8,7 +8,7 @@ Version:	%{version}
 Release:	%{release}
 Summary:	mro::* interface compatibility for Perls < 5.9.5
 URL:		http://search.cpan.org/dist/%{module}
-Source:		http://www.cpan.org/modules/by-module/Scope/%{module}-%{version}.tar.bz2
+Source:		http://search.cpan.org/CPAN/authors/id/B/BL/BLBLACK/%{module}-%{version}.tar.gz
 License:	GPL
 Group:		Development/Perl
 %if %{mdkversion} < 1010
