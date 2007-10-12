@@ -1,6 +1,6 @@
 %define module	MRO-Compat
 %define name	perl-%{module}
-%define version 0.04
+%define version 0.05
 %define release %mkrel 1
 
 Name:		%{name}
