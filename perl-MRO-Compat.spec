@@ -18,6 +18,7 @@ BuildRequires:	perl(Module::AutoInstall)
 BuildRequires:	perl(Class::C3) >= 0.19
 BuildRequires:	perl(Class::C3::XS) >= 0.19
 BuildArch:	noarch
+BuildRoot:	%{_tmppath}/%{name}-%{version}
 
 %description
 The "mro" namespace provides several utilities for dealing with method
