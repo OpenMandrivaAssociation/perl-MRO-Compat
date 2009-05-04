@@ -1,6 +1,6 @@
 %define module	MRO-Compat
 %define name	perl-%{module}
-%define version 0.09
+%define version 0.10
 %define release %mkrel 1
 
 Name:		%{name}
@@ -11,9 +11,6 @@ URL:		http://search.cpan.org/dist/%{module}
 Source:		http://search.cpan.org/CPAN/authors/id/B/BL/BLBLACK/%{module}-%{version}.tar.gz
 License:	GPL
 Group:		Development/Perl
-%if %{mdkversion} < 1010
-BuildRequires:	perl-devel
-%endif
 BuildRequires:	perl(Module::AutoInstall)
 BuildRequires:	perl(Class::C3) >= 0.19
 BuildRequires:	perl(Class::C3::XS) >= 0.19
