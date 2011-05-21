@@ -2,7 +2,7 @@
 %define name            perl-%{upstream_name}
 %define upstream_version    0.11
 %define version             %perl_convert_version %{upstream_version}
-%define release %mkrel 2
+%define release %mkrel 3
 
 Name:		%{name}
 Version:	%{version}
