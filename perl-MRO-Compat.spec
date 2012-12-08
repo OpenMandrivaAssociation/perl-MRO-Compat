@@ -1,22 +1,19 @@
 %define upstream_name	MRO-Compat
-%define name            perl-%{upstream_name}
 %define upstream_version    0.11
-%define version             %perl_convert_version %{upstream_version}
-%define release %mkrel 5
 
-Name:		%{name}
-Version:	%{version}
-Release:	%{release}
+Name:		perl-%{upstream_name}
+Version:	%perl_convert_version %{upstream_version}
+Release:	6
 Summary:	mro::* interface compatibility for Perls < 5.9.5
-URL:		http://search.cpan.org/dist/%{upstream_name}
-Source:		http://search.cpan.org/CPAN/authors/id/B/BL/BLBLACK/%{upstream_name}-%{upstream_version}.tar.gz
 License:	GPL
 Group:		Development/Perl
+URL:		http://search.cpan.org/dist/%{upstream_name}
+Source:		http://search.cpan.org/CPAN/authors/id/B/BL/BLBLACK/%{upstream_name}-%{upstream_version}.tar.gz
 BuildRequires:	perl(Module::AutoInstall)
 BuildRequires:	perl(Class::C3) >= 0.19
 BuildRequires:	perl(Class::C3::XS) >= 0.19
+BuildRequires:	perl-devel
 BuildArch:	noarch
-BuildRoot:	%{_tmppath}/%{name}-%{version}
 
 %description
 The "mro" namespace provides several utilities for dealing with method
@@ -45,20 +42,65 @@ interface docs, and contain a lot of other
 %setup -q -n %{upstream_name}-%{upstream_version}
 
 %build
-%{__perl} Makefile.PL INSTALLDIRS=vendor
+%__perl Makefile.PL INSTALLDIRS=vendor
 %make
 %make test
 
 %install
-%{__rm} -rf %{buildroot}
 %makeinstall_std
 
-%clean
-%{__rm} -rf %{buildroot}
-
 %files
-%defattr(-,root,root)
 %doc ChangeLog README
 %{perl_vendorlib}/MRO
 %{_mandir}/*/*
 
+
+%changelog
+* Tue Jan 24 2012 Oden Eriksson <oeriksson@mandriva.com> 0.110.0-5mdv2012.0
++ Revision: 767800
+- fix stupid and anal rpmlint enforcements that does not even show in the build system output.
+- rebuilt for perl-5.14.2
+- rebuilt for perl-5.14.x
+
+* Sat May 21 2011 Oden Eriksson <oeriksson@mandriva.com> 0.110.0-3
++ Revision: 676884
+- rebuild
+- mass rebuild
+
+* Wed Jun 10 2009 Guillaume Rousse <guillomovitch@mandriva.org> 0.110.0-1mdv2011.0
++ Revision: 384738
+- new version
+
+* Mon May 04 2009 Guillaume Rousse <guillomovitch@mandriva.org> 0.10-1mdv2010.0
++ Revision: 371661
+- new version
+
+* Mon Jun 16 2008 Guillaume Rousse <guillomovitch@mandriva.org> 0.09-1mdv2009.0
++ Revision: 220146
+- update to new version 0.09
+
+* Sun May 25 2008 Guillaume Rousse <guillomovitch@mandriva.org> 0.07-1mdv2009.0
++ Revision: 211159
+- update to new version 0.07
+
+  + Olivier Blin <blino@mandriva.org>
+    - restore BuildRoot
+
+  + Thierry Vignaud <tv@mandriva.org>
+    - kill re-definition of %%buildroot on Pixel's request
+
+* Fri Oct 12 2007 Guillaume Rousse <guillomovitch@mandriva.org> 0.05-1mdv2008.1
++ Revision: 97519
+- update to new version 0.05
+
+* Fri Aug 31 2007 Guillaume Rousse <guillomovitch@mandriva.org> 0.04-1mdv2008.0
++ Revision: 77098
+- new version
+
+* Wed Jul 04 2007 Guillaume Rousse <guillomovitch@mandriva.org> 0.03-1mdv2008.0
++ Revision: 48108
+- import perl-MRO-Compat
+
+
+* Wed Jul 04 2007 Guillaume Rousse <guillomovitch@mandriva.org> 0.03-1mdv2008.0
+- first mdv release 
