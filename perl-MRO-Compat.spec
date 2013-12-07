@@ -4,7 +4,7 @@
 Summary:	mro::* interface compatibility for Perls < 5.9.5
 Name:		perl-%{modname}
 Version:	%perl_convert_version %{modver}
-Release:	7
+Release:	8
 License:	GPLv2
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{modname}
