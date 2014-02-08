@@ -3,7 +3,7 @@
 
 Name:		perl-%{upstream_name}
 Version:	%perl_convert_version %{upstream_version}
-Release:	7
+Release:	8
 Summary:	mro::* interface compatibility for Perls < 5.9.5
 License:	GPL
 Group:		Development/Perl
