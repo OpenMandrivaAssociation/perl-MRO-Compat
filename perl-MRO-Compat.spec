@@ -10,6 +10,7 @@ Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{modname}
 Source0:	http://search.cpan.org/CPAN/authors/id/H/HA/HAARG/%{modname}-%{modver}.tar.gz
 BuildArch:	noarch
+BuildRequires:	perl(Test::More)
 BuildRequires:	perl(Module::AutoInstall)
 BuildRequires:	perl(Class::C3) >= 0.19
 BuildRequires:	perl(Class::C3::XS) >= 0.19
