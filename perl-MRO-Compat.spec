@@ -4,10 +4,10 @@
 Summary:	mro::* interface compatibility for Perls < 5.9.5
 Name:		perl-%{modname}
 Version:	%perl_convert_version %{modver}
-Release:	2
+Release:	3
 License:	GPLv2
 Group:		Development/Perl
-Url:		http://search.cpan.org/dist/%{modname}
+Url:		http://metacpan.org/pod/MRO::Compat
 Source0:	http://search.cpan.org/CPAN/authors/id/H/HA/HAARG/%{modname}-%{modver}.tar.gz
 BuildArch:	noarch
 BuildRequires:	perl(Test::More)
