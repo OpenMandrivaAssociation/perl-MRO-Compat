@@ -1,10 +1,10 @@
 %define modname	MRO-Compat
-%define modver	0.13
+%define modver	0.15
 
 Summary:	mro::* interface compatibility for Perls < 5.9.5
 Name:		perl-%{modname}
 Version:	%perl_convert_version %{modver}
-Release:	3
+Release:	1
 License:	GPLv2
 Group:		Development/Perl
 Url:		http://metacpan.org/pod/MRO::Compat
