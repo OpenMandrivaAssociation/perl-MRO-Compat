@@ -7,7 +7,7 @@ Version:	%perl_convert_version %{modver}
 Release:	2
 License:	GPLv2
 Group:		Development/Perl
-Url:		http://metacpan.org/pod/MRO::Compat
+Url:		https://metacpan.org/pod/MRO::Compat
 Source0:	http://search.cpan.org/CPAN/authors/id/H/HA/HAARG/%{modname}-%{modver}.tar.gz
 BuildArch:	noarch
 BuildRequires:	perl(Test::More)
