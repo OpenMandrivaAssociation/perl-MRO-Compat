@@ -4,7 +4,7 @@
 Summary:	mro::* interface compatibility for Perls < 5.9.5
 Name:		perl-%{modname}
 Version:	%perl_convert_version %{modver}
-Release:	2
+Release:	3
 License:	GPLv2
 Group:		Development/Perl
 Url:		https://metacpan.org/pod/MRO::Compat
