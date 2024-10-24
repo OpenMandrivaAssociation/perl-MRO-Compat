@@ -1,19 +1,18 @@
 %define modname	MRO-Compat
-%define modver	0.15
 
 Summary:	mro::* interface compatibility for Perls < 5.9.5
 Name:		perl-%{modname}
-Version:	%perl_convert_version %{modver}
-Release:	3
+Version:	0.15
+Release:	1
 License:	GPLv2
 Group:		Development/Perl
 Url:		https://metacpan.org/pod/MRO::Compat
-Source0:	http://search.cpan.org/CPAN/authors/id/H/HA/HAARG/%{modname}-%{modver}.tar.gz
+Source0:	http://search.cpan.org/CPAN/authors/id/H/HA/HAARG/%{modname}-%{version}.tar.gz
 BuildArch:	noarch
 BuildRequires:	perl(Test::More)
 BuildRequires:	perl(Module::AutoInstall)
-BuildRequires:	perl(Class::C3) >= 0.19
-BuildRequires:	perl(Class::C3::XS) >= 0.19
+BuildRequires:	perl(Class::C3)
+BuildRequires:	perl(Class::C3::XS)
 BuildRequires:	perl-devel
 
 %description
@@ -40,17 +39,17 @@ the function basically does, and what differences between MRO::Compat and
 interface docs, and contain a lot of other
 
 %prep
-%setup -qn %{modname}-%{modver}
+%autosetup -p1 -n %{modname}-%{version}
 
 %build
 %__perl Makefile.PL INSTALLDIRS=vendor
-%make
+%make_build
 
 %check
 %make test
 
 %install
-%makeinstall_std
+%make_install
 
 %files
 %doc README
