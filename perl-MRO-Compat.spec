@@ -9,6 +9,7 @@ Group:		Development/Perl
 Url:		https://metacpan.org/pod/MRO::Compat
 Source0:	http://search.cpan.org/CPAN/authors/id/H/HA/HAARG/%{modname}-%{version}.tar.gz
 BuildArch:	noarch
+BuildRequires:	make
 BuildRequires:	perl(Test::More)
 BuildRequires:	perl(Module::AutoInstall)
 BuildRequires:	perl(Class::C3)
