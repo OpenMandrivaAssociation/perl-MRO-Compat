@@ -11,7 +11,7 @@ Source0:	http://search.cpan.org/CPAN/authors/id/H/HA/HAARG/%{modname}-%{version}
 BuildArch:	noarch
 BuildRequires:	make
 BuildRequires:	perl(Test::More)
-BuildRequires:	perl(Module::AutoInstall)
+#BuildRequires:	perl(Module::AutoInstall)
 BuildRequires:	perl(Class::C3)
 BuildRequires:	perl(Class::C3::XS)
 BuildRequires:	perl-devel
